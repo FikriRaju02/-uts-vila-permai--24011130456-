@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vila Permai - Aplikasi Pemesanan Vila</title>
+    <!-- Penghubung CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header Semantik -->
+    <header class="main-header">
+      <h1 aria-label="Vila Permai"><span id="typewriterTitle" aria-hidden="true"></span></h1>
+      <p>Nikmati Kenyamanan liburan keluarga di kawasan Puncak, Bogor</p>
+    </header>
+
+    <!-- Navigasi Semantik -->
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#katalog">Daftar vila</a></li>
+        <li><a href="#pemesanan">Formulir Pemesanan</a></li>
+        <li><a href="#riwayat">Riwayat Pemesanan</a></li>
+        <li>
+          <button type="button" id="themeToggle" class="theme-toggle" aria-pressed="false">
+            ☾ Mode gelap
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Konten Utama -->
+    <main class="container">
+      <!-- Section: Pencarian & Katalog Vila -->
+      <section id="katalog" class="section-box">
+        <h2>Katalog Vila & Pencarian</h2>
+        <div class="search-container">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Cari nama vila atau fasilitas..."
+          />
+        </div>
+        <!-- Render DOM Dinamis dari JavaScript -->
+        <div id="vilaList" class="vila-grid"></div>
+      </section>
+
+      <!-- Section: Formulir Pemesanan -->
+      <section id="pemesanan" class="section-box">
+        <h2>Formulir Pemesanan Vila</h2>
+        <form id="bookingForm">
+          <div class="form-group">
+            <label for="namaTamu">Nama Lengkap Tamu:</label>
+            <input type="text" id="namaTamu" required />
+          </div>
+
+          <div class="form-group">
+            <label for="pilihVila">Pilih Vila:</label>
+            <select id="pilihVila" required>
+              <option value="">-- Pilih Vila --</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="checkIn">Tanggal Check-in:</label>
+            <input type="date" id="checkIn" required />
+          </div>
+
+          <div class="form-group">
+            <label for="checkOut">Tanggal Check-out:</label>
+            <input type="date" id="checkOut" required />
+          </div>
+
+          <div class="form-group">
+            <label for="jumlahTamu">Jumlah Tamu (1 - 10 orang):</label>
+            <input type="number" id="jumlahTamu" min="1" max="10" required />
+          </div>
+
+          <button type="button" id="btnCek" class="btn-secondary">
+            Cek Ketersediaan & Total
+          </button>
+          <button type="submit" class="btn-primary">Pesan Sekarang</button>
+        </form>
+        <div id="infoEstimasi" class="info-estimasi"></div>
+      </section>
+
+      <!-- Section: Area Hasil / Riwayat Pesanan -->
+      <section id="riwayat" class="section-box">
+        <h2>Ringkasan & Riwayat Pesanan Terakhir</h2>
+        <div id="hasilPesanan">
+          <p>Belum ada pesanan yang dibuat pada sesi ini.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Semantik -->
+    <footer class="main-footer">
+      <p>
+        &copy; 2026 Vila Permai. Kontak pemilik (pak Hendra): 0895-2629-5726 |
+        puncak, bogor, jawa barat.
+      </p>
+    </footer>
+
+    <!-- Penghubung JavaScript (Wajib ada di bawah sebelum </body>) -->
+    <script src="script.js"></script>
+  </body>
+</html>
