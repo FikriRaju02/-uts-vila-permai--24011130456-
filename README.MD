@@ -34,4 +34,4 @@ Aplikasi web statis interaktif untuk pemesanan vila di Puncak, Bogor. Dibangun t
 
 _(Silakan letakkan file gambar screenshot halaman web kamu ke dalam folder proyek, lalu tautkan di sini dengan format markdown di bawah ini)_:
 
-![Screenshot Aplikasi Vila Permai](hasil_website.png)
+![![alt text](image.png)](hasil_website.png)
